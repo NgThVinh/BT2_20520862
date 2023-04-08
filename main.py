@@ -19,7 +19,7 @@ def read_data(file_path):
     
 def solve(values, weights, capacity):
     start_time = time.time()
-    solver = pywrapknapsack_solver.KnapsackSolver(pywrapknapsack_solver.KnapsackSolver.KNAPSACK_MULTIDIMENSION_CBC_MIP_SOLVER, 'Knapsack')
+    solver = pywrapknapsack_solver.KnapsackSolver(pywrapknapsack_solver.KnapsackSolver.KNAPSACK_MULTIDIMENSION_BRANCH_AND_BOUND_SOLVER, 'Knapsack')
     solver.set_time_limit(timeout)
 
     solver.Init(values, [weights], [capacity])
@@ -31,17 +31,17 @@ def solve(values, weights, capacity):
 
 def main():
     global timeout 
-    timeout = 1
+    timeout = 420
     
-    files_path = glob.glob(r'kplib-master\00Uncorrelated\*\*\*.kp')
-    with open("result.txt", "w") as f:
+    files_path = glob.glob(r'kplib-master\*\*\*\*.kp')
+    with open("result.csv", "w") as f:
         f.write("filePath,totalValue,totalWeight,processingTime")
 
     for file_path in files_path:
         values, weights, capacity = read_data(file_path)
         total_value, total_weight, processing_time = solve(values, weights, capacity)
         
-        with open('result.txt', 'a') as f:
+        with open('result.csv', 'a') as f:
             f.write(f'\n{file_path[13:]},{total_value},{total_weight},{processing_time}')
     print('Completed')
 
