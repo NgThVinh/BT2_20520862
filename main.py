@@ -33,15 +33,17 @@ def main():
     global timeout 
     timeout = 420
     
-    files_path = glob.glob(r'kplib-master\*\*\*\*.kp')
-    with open("result.csv", "w") as f:
+    files_path = glob.glob(r'kplib-master\06*\*\*\*.kp')
+    result_path = r'result/06.csv'
+    with open(result_path, "w") as f:
         f.write("filePath,totalValue,totalWeight,processingTime")
-
+    # i = files_path.index(r'kplib-master\02StronglyCorrelated\n00200\R01000\s022.kp')
+    # files_path = files_path[i+1:]
     for file_path in files_path:
         values, weights, capacity = read_data(file_path)
         total_value, total_weight, processing_time = solve(values, weights, capacity)
         
-        with open('result.csv', 'a') as f:
+        with open(result_path, 'a') as f:
             f.write(f'\n{file_path[13:]},{total_value},{total_weight},{processing_time}')
     print('Completed')
 
