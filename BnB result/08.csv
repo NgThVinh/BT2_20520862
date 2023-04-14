@@ -1,0 +1,4 @@
+class,n,R,s,totalValue,totalWeight,processingTime
+08SpannerWeaklyCorrelated,n00050,R01000,s000.kp,10354,11452,1.517855167388916
+08SpannerWeaklyCorrelated,n00050,R01000,s001.kp,15276,6437,1.051645278930664
+08SpannerWeaklyCorrelated,n00050,R01000,s002.kp,2480,13330,0.0
