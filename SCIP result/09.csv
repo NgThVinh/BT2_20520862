@@ -705,7 +705,7 @@ class,n,R,s,totalValue,totalWeight,processingTime
 09SpannerStronglyCorrelated,n00500,R10000,s003.kp,2289538,480538,0.33467674255371094
 09SpannerStronglyCorrelated,n00500,R10000,s004.kp,2014122,210122,0.2771167755126953
 09SpannerStronglyCorrelated,n00500,R10000,s005.kp,2258442,823442,0.7421743869781494
-09SpannerStronglyCorrelated,n00500,R10000,s006.kp,*,*,*
+09SpannerStronglyCorrelated,n00500,R10000,s006.kp,,,
 09SpannerStronglyCorrelated,n00500,R10000,s007.kp,1946885,287885,0.3700103759765625
 09SpannerStronglyCorrelated,n00500,R10000,s008.kp,2671156,753156,0.5146236419677734
 09SpannerStronglyCorrelated,n00500,R10000,s009.kp,1952922,506922,0.805842399597168
